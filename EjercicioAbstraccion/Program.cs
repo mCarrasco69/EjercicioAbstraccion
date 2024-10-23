@@ -9,12 +9,13 @@ namespace EjercicioAbstraccion
             int opcion;
             do
             {
-                Console.WriteLine(":             Menu              :");
+                Console.WriteLine();
+                Console.WriteLine(":--------------Menu---------------:");
                 Console.WriteLine();
                 Console.WriteLine("Seleccione una formula matemática:");
                 Console.WriteLine("1. Convertir Metros a Kilometros");
                 Console.WriteLine("2. Convertir Celsius a Fahrenheit");
-                Console.WriteLine("2. Convertir onzas a kilogramos");
+                Console.WriteLine("3. Convertir onzas a kilogramos");
                 Console.WriteLine("0. Salir");
                 Console.Write("Opción: ");
                 opcion = Convert.ToInt32(Console.ReadLine());
@@ -28,6 +29,7 @@ namespace EjercicioAbstraccion
                         ConvertirMetrosAKilometros.Calcular();
                         ConvertirMetrosAKilometros.Imprimir();
                         break;
+                      
                     case 2:
                         Console.Write("Ingrese los grados Celsius: ");
                         double celsius = Convert.ToDouble(Console.ReadLine());
@@ -35,15 +37,15 @@ namespace EjercicioAbstraccion
                         convertirCelsius.Calcular();
                         convertirCelsius.Imprimir();
                         break;
-
+                
                     case 3:
-                        Console.Write("Ingrese los grados Celsius: ");
+                        Console.Write("Ingrese las onzas: ");
                         double onzas = Convert.ToDouble(Console.ReadLine());
-                        FormulaMatematica OnzasAKilogramos = new ConvertirCelsiusAFahrenheit(onzas);
+                        FormulaMatematica OnzasAKilogramos = new OnzasAKilogramos(onzas);
                         OnzasAKilogramos.Calcular();
                         OnzasAKilogramos.Imprimir();
                         break;
-
+                  
                     case 0:
                         Console.WriteLine("Saliendo del programa...");
                         break;
@@ -51,6 +53,7 @@ namespace EjercicioAbstraccion
                         Console.WriteLine("Opción no válida. Intente de nuevo.");
                         break;
                 }
+                Console.WriteLine();
             } while (opcion != 0);
         }
     }
