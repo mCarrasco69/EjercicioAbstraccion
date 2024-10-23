@@ -9,7 +9,7 @@ namespace EjercicioAbstraccion
             int opcion;
             do
             {
-                Console.WriteLine(":              Menun              :");
+                Console.WriteLine(":             Menu              :");
                 Console.WriteLine();
                 Console.WriteLine("Seleccione una formula matemática:");
                 Console.WriteLine("1. Metros a Kilometros");
