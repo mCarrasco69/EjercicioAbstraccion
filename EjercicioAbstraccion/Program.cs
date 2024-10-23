@@ -12,9 +12,9 @@ namespace EjercicioAbstraccion
                 Console.WriteLine(":             Menu              :");
                 Console.WriteLine();
                 Console.WriteLine("Seleccione una formula matemática:");
-                Console.WriteLine("1. Metros a Kilometros");
+                Console.WriteLine("1. Convertir Metros a Kilometros");
                 Console.WriteLine("2. Convertir Celsius a Fahrenheit");
-                //Console.WriteLine("3. Perímetro de un rectángulo");
+                Console.WriteLine("2. Convertir onzas a kilogramos");
                 Console.WriteLine("0. Salir");
                 Console.Write("Opción: ");
                 opcion = Convert.ToInt32(Console.ReadLine());
@@ -35,7 +35,15 @@ namespace EjercicioAbstraccion
                         convertirCelsius.Calcular();
                         convertirCelsius.Imprimir();
                         break;
-                   
+
+                    case 3:
+                        Console.Write("Ingrese los grados Celsius: ");
+                        double onzas = Convert.ToDouble(Console.ReadLine());
+                        FormulaMatematica OnzasAKilogramos = new ConvertirCelsiusAFahrenheit(onzas);
+                        OnzasAKilogramos.Calcular();
+                        OnzasAKilogramos.Imprimir();
+                        break;
+
                     case 0:
                         Console.WriteLine("Saliendo del programa...");
                         break;
